@@ -29,7 +29,7 @@ const coffeeShop = {
     },
   
     makeDrink: function (drinkType) {
-            if (this.drinkRequirements[drinkType] == undefined || this.beans >= this.drinkRequirements[drinkType].beanRequirement) {
+            if (!this.drinkRequirements[drinkType] || this.beans >= this.drinkRequirements[drinkType].beanRequirement) {
                 switch(drinkType) {
                     case "latte":
                         this.beans = this.beans - this.drinkRequirements.latte.beanRequirement
@@ -57,7 +57,7 @@ const coffeeShop = {
     },
 
     buyDrink: function(drinkType){
-        drinks = Object.keys(this.drinkRequirements)
+        let drinks = Object.keys(this.drinkRequirements)
         let isAvailable = drinks.includes(drinkType)
         if (isAvailable) {
             this.money = this.money + this.drinkRequirements[drinkType].price
@@ -68,8 +68,6 @@ const coffeeShop = {
         }
     }
 }
-
-let drinks = []
 
 coffeeShop.makeDrink("latte"); 
 coffeeShop.makeDrink("americano");
