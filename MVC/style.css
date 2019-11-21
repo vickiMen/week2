@@ -1,0 +1,42 @@
+.mainContainer {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "i"
+    "p";
+}
+
+.inputContainer {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-area: i; */
+    /* display: block; */
+    border: 1px solid black;
+    height: 50vh;
+    width: 40vw;
+    align-content: center;
+    justify-content: center;
+}
+
+.input {
+    font-family: Helvetica; 
+}
+
+.postsContainer {
+    font-family: Helvetica;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.posts {
+    display: grid;
+    border: 1px solid black;
+    height: 50vh;
+    width: 40vw;
+    align-content: center;
+    justify-content: center;
+    grid-area: p;
+}
