@@ -1,0 +1,14 @@
+#container {
+    height: 70vh;
+    width: 70vw;
+    display: grid;
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    border: 1px black solid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    padding: 30px;
+    margin: 30px;
+}
+
